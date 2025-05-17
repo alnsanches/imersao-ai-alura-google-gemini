@@ -1,7 +1,7 @@
 # Imersão AI _ Alura com o Google Gemini
 
 
-# Sistema de Criação de Posts para Instagram com 4 Agentes
+# Sistema de Informações para Viagens com 4 Agentes
 
 Este projeto implementa um sistema de criação de posts para o Instagram utilizando uma arquitetura com 4 agentes especializados. O objetivo é automatizar e otimizar o processo de geração de conteúdo envolvente e relevante para a plataforma.
 
