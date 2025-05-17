@@ -1,44 +1,67 @@
 # Imersão AI _ Alura com o Google Gemini
 
 
-# Sistema de Informações para Viagens com 4 Agentes
+# 🌍 Sistema de Informações de Viagem com Google Gemini e ADK
 
-Este projeto implementa um sistema de criação de posts para o Instagram utilizando uma arquitetura com 4 agentes especializados. O objetivo é automatizar e otimizar o processo de geração de conteúdo envolvente e relevante para a plataforma.
+Este projeto utiliza o modelo de linguagem Gemini do Google e o Agent Development Kit (ADK) para criar um sistema inteligente de informações de viagem. Ao fornecer um destino, o sistema consulta a web em tempo real, planeja um post de rede social relevante, gera um resumo informativo e revisa as informações para o usuário.
 
-## Visão Geral dos Agentes
+## 🚀 Funcionalidades
 
-O sistema é composto por quatro agentes distintos, cada um com uma função específica no processo de criação do post:
+1.  **Busca Inteligente de Novidades (Agente 1):**
+    * Utiliza a ferramenta de busca do Google para encontrar as notícias, eventos e lançamentos mais recentes relacionados ao destino de viagem especificado.
+    * Prioriza informações recentes e relevantes para viajantes (máximo de um mês).
+    * Foca em eventos culturais, novidades turísticas, atualizações de transporte e informações úteis.
 
-1.  **Agente Buscador:** Responsável por pesquisar e coletar informações relevantes sobre o tópico fornecido pelo usuário. Este agente utiliza diversas fontes para identificar tendências, notícias e dados importantes.
+2.  **Planejamento de Conteúdo para Redes Sociais (Agente 2):**
+    * Analisa os tópicos encontrados pelo Agente 1.
+    * Aprofunda as informações práticas e inspiradoras sobre cada tópico usando a busca do Google.
+    * Gera pontos-chave para posts de redes sociais, incluindo gancho, atrações, dicas práticas e sugestões visuais.
+    * Seleciona o tema mais relevante e cria um esboço de plano de post (título, seções, call-to-action).
 
-2.  **Agente Planejador:** Com base nas informações coletadas pelo Agente Buscador, este agente planeja a estrutura do post, define os pontos-chave a serem abordados, sugere elementos visuais e esboça um plano de postagem.
+3.  **Geração de Resumo Informativo (Agente 3):**
+    * Cria um resumo conciso e útil para viajantes interessados no destino.
+    * Inclui informações essenciais como moeda local, clima típico/melhor época para visitar, idioma oficial e necessidade de visto.
+    * Baseia-se no plano de post detalhado gerado pelo Agente 2.
 
-3.  **Agente Redator:** Utilizando o plano elaborado pelo Agente Planejador, este agente redige o texto do post para o Instagram, buscando uma linguagem envolvente, otimizada para a plataforma e que capture a atenção do público.
+4.  **Revisão e Consolidação das Informações (Agente 4):**
+    * Revisa o rascunho gerado pelo Agente 3.
+    * Consolida as informações de forma sucinta e clara para o usuário final, garantindo que não faltem detalhes importantes para o planejamento da viagem.
 
-4.  **Agente Revisor:** Este agente revisa o rascunho do post gerado pelo Agente Redator, buscando erros de gramática, ortografia, repetições, inconsistências e oportunidades de melhoria na linguagem e na experiência do usuário.
+## ⚙️ Tecnologias Utilizadas
 
-## Como Funciona
+* **Google Gemini:** Modelo de linguagem multimodal do Google para geração de texto e compreensão.
+* **Google Agent Development Kit (ADK):** Framework para construir agentes inteligentes e colaborativos.
+* **Python:** Linguagem de programação principal.
+* **`google-genai`:** Biblioteca Python para interagir com a API do Google Gemini.
+* **`google-adk`:** Biblioteca Python do Agent Development Kit.
+* **Google Search Tool:** Ferramenta do ADK para realizar buscas na web.
+* **IPython.display:** Para exibir Markdown e HTML no ambiente Colab.
+* **`python-dotenv` (Opcional):** Para gerenciar chaves de API de forma segura (não utilizado diretamente no código, mas recomendado para produção).
 
-O fluxo de trabalho do sistema é o seguinte:
+## 🛠️ Pré-requisitos
 
-1.  O usuário interage com o sistema, fornecendo um **tópico** sobre o qual deseja criar um post de tendências para o Instagram.
-2.  O **Agente Buscador** recebe o tópico e realiza uma pesquisa para encontrar informações relevantes e atuais.
-3.  O **Agente Planejador** analisa as informações encontradas e elabora um plano para o post, incluindo pontos-chave, sugestões visuais e um tema central.
-4.  O **Agente Redator** utiliza o plano para escrever o texto do post, buscando um estilo adequado para o Instagram.
-5.  O **Agente Revisor** avalia o rascunho do post, oferecendo sugestões de melhoria para otimizar o conteúdo.
-6.  O resultado final é um post revisado e pronto para ser publicado no Instagram.
+* Uma conta Google Cloud com acesso à API Gemini.
+* Uma chave de API do Google Gemini configurada como um segredo do usuário no Google Colab (ou configurada como uma variável de ambiente).
+* Ambiente Python com as bibliotecas listadas em "Tecnologias Utilizadas" instaladas.
 
-## Exemplo de Uso
+## 🚀 Como Executar
 
-No exemplo fornecido, o usuário solicitou a criação de um post sobre "coreia do sul". Os agentes trabalharam em conjunto para produzir um post informativo e relevante sobre o novo "e-Arrival Card" para viajantes.
+1.  **Configurar a API Key:**
+    * No Google Colab, vá em "Ferramentas" -> "Segredos".
+    * Crie um novo segredo com o nome `GOOGLE_API_KEY` e cole sua chave de API do Google Gemini.
 
-## Próximos Passos
+2.  **Instalar as Bibliotecas:**
+    * Execute a primeira célula do notebook (`%pip -q install google-genai`).
+    * Execute a célula para instalar o ADK (`!pip install -q google-adk`).
 
-Este projeto pode ser expandido e aprimorado com diversas funcionalidades, como:
+3.  **Executar o Código:**
+    * Execute as células de código sequencialmente.
+    * Quando solicitado, digite o destino de viagem para o qual você deseja obter informações.
 
-* Integração com APIs do Instagram para agendamento e publicação automática de posts.
-* Implementação de análise de sentimentos para avaliar o tom do post.
-* Capacidade de gerar múltiplas opções de posts com diferentes abordagens.
-* Personalização do estilo de escrita dos agentes.
-* Suporte para outros idiomas.
+4.  **Visualizar os Resultados:**
+    * O sistema exibirá os resultados de cada agente, desde a busca inicial até o resumo final da viagem, formatados em Markdown.
+
+## 💡 Uso
+
+Ao executar o script, você será solicitado a inserir um destino de viagem. O sistema então processará sua solicitação através dos quatro agentes, fornecendo informações atualizadas e relevantes para o seu planejamento.
 
