@@ -1,9 +1,9 @@
 # Imersão AI _ Alura com o Google Gemini
 
 
-# 🌍 Sistema de Informações de Viagem com Google Gemini e ADK
+# 🌍 Sistema de Informações de Viagem Inteligente
 
-Este projeto utiliza o modelo de linguagem Gemini do Google e o Agent Development Kit (ADK) para criar um sistema inteligente de informações de viagem. Ao fornecer um destino, o sistema consulta a web em tempo real, planeja um post de rede social relevante, gera um resumo informativo e revisa as informações para o usuário.
+Este projeto utiliza o modelo de linguagem Gemini do Google e o Agent Development Kit (ADK) para criar um sistema inteligente de informações de viagem. Ao fornecer um destino, o sistema consulta a web em tempo real, planeja informações úteis, gera um resumo informativo e revisa o conteúdo para o usuário.
 
 ## 🚀 Funcionalidades
 
@@ -12,16 +12,16 @@ Este projeto utiliza o modelo de linguagem Gemini do Google e o Agent Developmen
     * Prioriza informações recentes e relevantes para viajantes (máximo de um mês).
     * Foca em eventos culturais, novidades turísticas, atualizações de transporte e informações úteis.
 
-2.  **Planejamento de Conteúdo para Redes Sociais (Agente 2):**
+2.  **Planejamento de Informações de Viagem (Agente 2):**
     * Analisa os tópicos encontrados pelo Agente 1.
     * Aprofunda as informações práticas e inspiradoras sobre cada tópico usando a busca do Google.
-    * Gera pontos-chave para posts de redes sociais, incluindo gancho, atrações, dicas práticas e sugestões visuais.
-    * Seleciona o tema mais relevante e cria um esboço de plano de post (título, seções, call-to-action).
+    * Gera resumos concisos e úteis para o usuário, destacando pontos principais, detalhes relevantes e sugestões de como aproveitar a informação na viagem.
+    * Seleciona o tema mais relevante e útil, justificando a escolha e apresentando um breve plano de informações (título, principais detalhes, recomendações).
 
 3.  **Geração de Resumo Informativo (Agente 3):**
     * Cria um resumo conciso e útil para viajantes interessados no destino.
     * Inclui informações essenciais como moeda local, clima típico/melhor época para visitar, idioma oficial e necessidade de visto.
-    * Baseia-se no plano de post detalhado gerado pelo Agente 2.
+    * Baseia-se no plano de informações detalhado gerado pelo Agente 2.
 
 4.  **Revisão e Consolidação das Informações (Agente 4):**
     * Revisa o rascunho gerado pelo Agente 3.
@@ -63,5 +63,4 @@ Este projeto utiliza o modelo de linguagem Gemini do Google e o Agent Developmen
 
 ## 💡 Uso
 
-Ao executar o script, você será solicitado a inserir um destino de viagem. O sistema então processará sua solicitação através dos quatro agentes, fornecendo informações atualizadas e relevantes para o seu planejamento.
-
+Ao executar o script, você será solicitado a inserir um destino de viagem. O sistema então processará sua solicitação através dos quatro agentes, fornecendo informações atualizadas e relevantes para o seu planejamento diretamente na tela.
